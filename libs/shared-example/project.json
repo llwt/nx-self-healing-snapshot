@@ -1,0 +1,19 @@
+{
+  "name": "shared-example",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared-example/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/shared-example",
+        "main": "libs/shared-example/src/index.ts",
+        "tsConfig": "libs/shared-example/tsconfig.lib.json",
+        "assets": ["libs/shared-example/*.md"]
+      }
+    }
+  }
+}
